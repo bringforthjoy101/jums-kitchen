@@ -22,7 +22,6 @@ const UserAccountTab = ({ selectedProduct }) => {
 		price: selectedProduct.price,
 		costPrice: selectedProduct.costPrice,
 		packagingPrice: selectedProduct.packagingPrice,
-		smokeHousePrice: selectedProduct.smokeHousePrice,
 		unit: selectedProduct.unit,
 		unitValue: selectedProduct.unitValue,
 		category: selectedProduct.category
@@ -47,7 +46,6 @@ const UserAccountTab = ({ selectedProduct }) => {
 						price: selectedProduct.price,
 						costPrice: selectedProduct.costPrice,
 						packagingPrice: selectedProduct.packagingPrice,
-						smokeHousePrice: selectedProduct.smokeHousePrice,
 						unitValue: selectedProduct.unitValue,
 					})
 				} else {
@@ -58,7 +56,6 @@ const UserAccountTab = ({ selectedProduct }) => {
 						price: selectedProduct.price,
 						costPrice: selectedProduct.costPrice,
 						packagingPrice: selectedProduct.packagingPrice,
-						smokeHousePrice: selectedProduct.smokeHousePrice,
 						unitValue: selectedProduct.unitValue,
 					})
 				}
@@ -186,7 +183,7 @@ const UserAccountTab = ({ selectedProduct }) => {
 								/>
 							</FormGroup>
 						</Col>
-						<Col md="6" sm="12">
+						{/* <Col md="6" sm="12">
 							<FormGroup>
 								<Label for="smokeHousePrice">Smoke House Price</Label>
 								<AvInput
@@ -198,7 +195,7 @@ const UserAccountTab = ({ selectedProduct }) => {
 									required
 								/>
 							</FormGroup>
-						</Col>
+						</Col> */}
 						<Col md="6" sm="12">
 							<FormGroup>
 								<Label for="packagingPrice">Product Packaging Price</Label>
@@ -239,6 +236,7 @@ const UserAccountTab = ({ selectedProduct }) => {
 									<option value={selectedProduct.unit} className="text-cpitalize">
 										{selectedProduct.unit}
 									</option>
+									<option value="wrap">Wrap</option>
 									<option value="kg">Kilogram</option>
 									<option value="pck">Pack</option>
 									<option value="pcs">Pieces</option>
