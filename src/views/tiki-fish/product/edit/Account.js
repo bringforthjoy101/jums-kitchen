@@ -166,7 +166,6 @@ const UserAccountTab = ({ selectedProduct }) => {
 									placeholder="Product Cost Price"
 									value={selectedProduct.costPrice || 0}
 									onChange={(e) => setProductData({ ...productData, costPrice: e.target.value })}
-									required
 								/>
 							</FormGroup>
 						</Col>
@@ -205,7 +204,6 @@ const UserAccountTab = ({ selectedProduct }) => {
 									placeholder="Product Packaging Price"
 									value={selectedProduct.packagingPrice || 0}
 									onChange={(e) => setProductData({ ...productData, packagingPrice: e.target.value })}
-									required
 								/>
 							</FormGroup>
 						</Col>
