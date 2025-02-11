@@ -252,7 +252,6 @@ const Cart = (props) => {
 									placeholder="Akure, Ondo State"
 									value={orderData.location}
 									onChange={(e) => setOrderData({ ...orderData, location: e.target.value })}
-									required
 								/>
 							</FormGroup>
 							<FormGroup>
