@@ -64,7 +64,7 @@ const AnalyticsDashboard = () => {
 			</Row>
 			{userData?.role === 'admin' && (
 				<>
-					<Row className="match-height">
+					{/* <Row className="match-height">
 						<Col xl="4" md="6" sm="12">
 							<StatsVertical icon={<DollarSign size={21} />} color="success" stats={dashData.businessBalance ? Number(dashData?.businessBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }) : <Spinner className="mr-25" size="s" />} statTitle="Total Account Balance" />
 						</Col>
@@ -95,16 +95,8 @@ const AnalyticsDashboard = () => {
 								statTitle="Sales Balance"
 							/>
 						</Col>
-						{/* <Col xl="4" md="6" sm="12">
-							<StatsVertical
-								icon={<DollarSign size={21} />}
-								color="success"
-								stats={dashData.smokeHouseBalance ? Number(dashData?.smokeHouseBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="sm" />}
-								statTitle="Smoke House Balance"
-							/>
-						</Col> */}
-					</Row>
-					<Row className="match-height">
+					</Row> */}
+					{/* <Row className="match-height">
 						<Col xl="4" md="6" sm="12">
 							<StatsVertical icon={<TrendingUp size={21} />} color="primary" stats={dashData.stock ? Number(dashData?.stock.stockVolume).toLocaleString() : <Spinner className="mr-25" size="s" />} statTitle="Total Stocks Available" />
 						</Col>
@@ -124,14 +116,6 @@ const AnalyticsDashboard = () => {
 								statTitle="Available Stocks Profits"
 							/>
 						</Col>
-						{/* <Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.smokeHouseAvailableStock)}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Available Stocks - Smoke House"
-					/>
-				</Col> */}
 						<Col xl="4" md="6" sm="12">
 							<StatsVertical
 								icon={<TrendingUp size={21} />}
@@ -148,7 +132,7 @@ const AnalyticsDashboard = () => {
 								statTitle="Profit So Far"
 							/>
 						</Col>
-					</Row>
+					</Row> */}
 					<Row className="match-height">
 						<Col xl="4" md="6" sm="12">
 							<StatsVertical
