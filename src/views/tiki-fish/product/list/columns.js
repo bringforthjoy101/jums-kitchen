@@ -48,6 +48,7 @@ const handleDelete = async (id) => {
   }).then(async function (result) {
     if (result.value) {
       const deleted = await store.dispatch(deleteProduct(id))
+      // console.log({deleted})
       if (deleted.status) {
         await store.dispatch(getAllData())
           MySwal.fire({

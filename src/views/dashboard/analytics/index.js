@@ -62,67 +62,69 @@ const AnalyticsDashboard = () => {
 					{dashData.sales ? <StatsCard cols={{ xl: '4', sm: '6' }} statsData={dashData?.sales.topSelling} /> : <Spinner className="mr-25" size="l" />}
 				</Col>
 			</Row>
-			<Row className="match-height">
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical icon={<DollarSign size={21} />} color="success" stats={dashData.businessBalance ? Number(dashData?.businessBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="s" />} statTitle="Total Account Balance" />
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical icon={<DollarSign size={21} />} color="success" stats={dashData.logisticsBalance ? Number(dashData?.logisticsBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="s" />} statTitle="Logistics Balance" />
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<DollarSign size={21} />}
-						color="success"
-						stats={dashData.packagingBalance ? Number(dashData?.packagingBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="sm" />}
-						statTitle="Packaging Balance"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<DollarSign size={21} />}
-						color="success"
-						stats={dashData.profitBalance ? Number(dashData?.profitBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="sm" />}
-						statTitle="Profit Balance"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<DollarSign size={21} />}
-						color="success"
-						stats={dashData.salesBalance ? Number(dashData?.salesBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="sm" />}
-						statTitle="Sales Balance"
-					/>
-				</Col>
-				{/* <Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<DollarSign size={21} />}
-						color="success"
-						stats={dashData.smokeHouseBalance ? Number(dashData?.smokeHouseBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="sm" />}
-						statTitle="Smoke House Balance"
-					/>
-				</Col> */}
-			</Row>
-			<Row className="match-height">
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical icon={<TrendingUp size={21} />} color="primary" stats={dashData.stock ? Number(dashData?.stock.stockVolume).toLocaleString() : <Spinner className="mr-25" size="s" />} statTitle="Total Stocks Available" />
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.stock.stockValue)}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Available Stocks"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.stock.stockProfit)}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Available Stocks Profits"
-					/>
-				</Col>
-				{/* <Col xl="4" md="6" sm="12">
+			{userData?.role === 'admin' && (
+				<>
+					<Row className="match-height">
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical icon={<DollarSign size={21} />} color="success" stats={dashData.businessBalance ? Number(dashData?.businessBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }) : <Spinner className="mr-25" size="s" />} statTitle="Total Account Balance" />
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical icon={<DollarSign size={21} />} color="success" stats={dashData.logisticsBalance ? Number(dashData?.logisticsBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }) : <Spinner className="mr-25" size="s" />} statTitle="Logistics Balance" />
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<DollarSign size={21} />}
+								color="success"
+								stats={dashData.packagingBalance ? Number(dashData?.packagingBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }) : <Spinner className="mr-25" size="sm" />}
+								statTitle="Packaging Balance"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<DollarSign size={21} />}
+								color="success"
+								stats={dashData.profitBalance ? Number(dashData?.profitBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }) : <Spinner className="mr-25" size="sm" />}
+								statTitle="Profit Balance"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<DollarSign size={21} />}
+								color="success"
+								stats={dashData.salesBalance ? Number(dashData?.salesBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN' }) : <Spinner className="mr-25" size="sm" />}
+								statTitle="Sales Balance"
+							/>
+						</Col>
+						{/* <Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<DollarSign size={21} />}
+								color="success"
+								stats={dashData.smokeHouseBalance ? Number(dashData?.smokeHouseBalance).toLocaleString('en-NG', { style: 'currency', currency: 'NGN'}) : <Spinner className="mr-25" size="sm" />}
+								statTitle="Smoke House Balance"
+							/>
+						</Col> */}
+					</Row>
+					<Row className="match-height">
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical icon={<TrendingUp size={21} />} color="primary" stats={dashData.stock ? Number(dashData?.stock.stockVolume).toLocaleString() : <Spinner className="mr-25" size="s" />} statTitle="Total Stocks Available" />
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.stock.stockValue)}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="Available Stocks"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.stock.stockProfit)}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="Available Stocks Profits"
+							/>
+						</Col>
+						{/* <Col xl="4" md="6" sm="12">
 					<StatsVertical
 						icon={<TrendingUp size={21} />}
 						color="primary"
@@ -130,73 +132,75 @@ const AnalyticsDashboard = () => {
 						statTitle="Available Stocks - Smoke House"
 					/>
 				</Col> */}
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.profitToday)}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Profit Today"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.totalProfit.toFixed(0))}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Profit So Far"
-					/>
-				</Col>
-			</Row>
-			<Row className="match-height">
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesToday) || 0}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Today"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesYesterday) || 0}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="Yesterday"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesThisWeek) || 0}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="This Week"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesThisMonth) || 0}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="This Month"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesThisYear) || 0}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="This Year"
-					/>
-				</Col>
-				<Col xl="4" md="6" sm="12">
-					<StatsVertical
-						icon={<TrendingUp size={21} />}
-						color="primary"
-						stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesSoFar.toFixed(0))}` : <Spinner className="mr-25" size="sm" />}
-						statTitle="So Far"
-					/>
-				</Col>
-			</Row>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.profitToday)}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="Profit Today"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.totalProfit.toFixed(0))}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="Profit So Far"
+							/>
+						</Col>
+					</Row>
+					<Row className="match-height">
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesToday) || 0}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="Today"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesYesterday) || 0}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="Yesterday"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesThisWeek) || 0}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="This Week"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesThisMonth) || 0}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="This Month"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesThisYear) || 0}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="This Year"
+							/>
+						</Col>
+						<Col xl="4" md="6" sm="12">
+							<StatsVertical
+								icon={<TrendingUp size={21} />}
+								color="primary"
+								stats={dashData.sales ? `₦${numFormatter(dashData.sales?.salesSoFar.toFixed(0))}` : <Spinner className="mr-25" size="sm" />}
+								statTitle="So Far"
+							/>
+						</Col>
+					</Row>
+				</>
+			)}
 		</div>
 	)
 }

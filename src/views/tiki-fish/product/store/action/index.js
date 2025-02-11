@@ -64,7 +64,8 @@ export const deleteProduct = (productId) => {
         return response.data
     } else {
       console.log(response)
-      swal('Oops!', 'Something went wrong.', 'error')
+      swal('Oops!', response.data.message || 'Something went wrong.', 'error')
+      return response.data.status
     }
   }
 }
