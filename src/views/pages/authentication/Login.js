@@ -82,8 +82,8 @@ const Login = props => {
 	const [password, setPassword] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const illustration = skin === 'dark' ? 'tiki-banner.jpg' : 'tiki-banner.jpg',
-    source = require(`@src/assets/images/pages/${illustration}`).default
+  const illustration = skin === 'dark' ? 'banner-23.jpg' : 'banner-23.jpg',
+    source = require(`@src/assets/images/banner/${illustration}`).default
 
     useEffect(() => {
       console.log({code})
