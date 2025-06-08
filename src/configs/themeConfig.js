@@ -3,7 +3,7 @@
 //Template config options
 const themeConfig = {
   app: {
-    appName: 'Jums Kitchen',
+    appName: 'Bnb Kitchen',
     appLogoImage: require('@src/assets/images/logo/favicon.png').default
   },
   layout: {

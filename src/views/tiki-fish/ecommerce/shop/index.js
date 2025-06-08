@@ -45,7 +45,7 @@ const Shop = () => {
 
   return (
     <Fragment>
-      <Breadcrumbs breadCrumbTitle='Jums Kitchen' breadCrumbParent='Jums Kitchen' breadCrumbActive='Products' />
+      <Breadcrumbs breadCrumbTitle='Bnb Kitchen' breadCrumbParent='Bnb Kitchen' breadCrumbActive='Products' />
       <Products
         store={store}
         dispatch={dispatch}

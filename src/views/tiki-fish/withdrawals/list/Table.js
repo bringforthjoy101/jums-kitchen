@@ -322,7 +322,7 @@ const ReportsTable = () => {
 		})
 		const date = new Date()
 		doc.save(
-			`jums_kitchen_orders_${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}_${date.getDate()}-${date.getMonth()}-${date.getFullYear()}.pdf`
+			`bnb_kitchen_orders_${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}_${date.getDate()}-${date.getMonth()}-${date.getFullYear()}.pdf`
 		)
 	}
 
@@ -386,7 +386,7 @@ const ReportsTable = () => {
 		const doc = new jsPDF()
 		doc.setFontSize(24);
 		doc.setTextColor("blue");
-		doc.text("Jums Kitchen Sales Platform.", 20, 20);
+		doc.text("Bnb Kitchen Sales Platform.", 20, 20);
 		doc.setFontSize(12);
 		doc.text(`Withdrawal Summary from ${moment(picker[0]).format('LL')} to ${moment(picker[1]).format('LL')}`, 20, 30);
 		doc.autoTable({ html: '#withdrawal-table', startY: 40, startX: 80 })

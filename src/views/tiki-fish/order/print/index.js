@@ -68,7 +68,7 @@ const { selectedOrder } = store
 				{/* <div className='col-md-3'> */}
 				<div className="d-flex justify-content-between flex-column pb-2">
 					<h2 className="text-center mb-1" style={{ color: '#000000' }}>
-					JUMS KITCHEN
+					BNB KITCHEN
 					</h2>
 					<span className="invoice-date-title text-center mb-1">500m Opposite Ilere Junction, Along Ijare Road, Akure South, Ondo State. Nigeria.</span>
 					<div className="mt-md-0 mt-2">
