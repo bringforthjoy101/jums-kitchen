@@ -235,6 +235,7 @@ const UserAccountTab = ({ selectedProduct }) => {
 										{selectedProduct.unit}
 									</option>
 									<option value="wrap">Wrap</option>
+									<option value='scoop'>Scoop</option>
 									<option value="kg">Kilogram</option>
 									<option value="pck">Pack</option>
 									<option value="pcs">Pieces</option>
