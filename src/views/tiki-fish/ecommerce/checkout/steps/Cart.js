@@ -301,6 +301,10 @@ const Cart = (props) => {
 										<div className="detail-amt font-weight-bolder">₦{subTotal.toLocaleString()}</div>
 									</li>
 									<li className="price-detail">
+										<div className="detail-title detail-total">Tax</div>
+										<div className="detail-amt font-weight-bolder">₦{(Number(subTotal) + (Number(subTotal) * 0.05)).toLocaleString()}</div>
+									</li>
+									<li className="price-detail">
 										<div className="detail-title detail-total">Discount</div>
 										<div className="detail-amt font-weight-bolder">₦{Number(discount).toLocaleString()}</div>
 									</li>
