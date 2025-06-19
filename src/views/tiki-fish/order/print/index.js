@@ -130,7 +130,7 @@ const { selectedOrder } = store
 							<hr className="my-50" />
 							<div className="invoice-total-item">
 								<p className="invoice-total-title">Total:</p>
-								<p className="invoice-total-amount">₦{(Number(selectedOrder?.amount) + (Number(data.tax))).toLocaleString()}</p>
+								<p className="invoice-total-amount">₦{(Number(selectedOrder?.amount)).toLocaleString()}</p>
 							</div>
 						</div>
 					</Col>
