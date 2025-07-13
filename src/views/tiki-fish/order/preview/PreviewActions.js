@@ -103,7 +103,7 @@ const PreviewActions = ({ id, data }) => {
       const doc = new jsPDF()
       doc.setFontSize(24);
 		  doc.setTextColor("blue");
-      doc.text("Bnb Kitchen Sales.", 14, 20);
+      doc.text("Real Obafunso Lounge Sales.", 14, 20);
   
       // Add title
       doc.setFontSize(12);

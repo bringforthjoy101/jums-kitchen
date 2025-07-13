@@ -3,7 +3,7 @@
 //Template config options
 const themeConfig = {
   app: {
-    appName: 'Bnb Kitchen',
+    appName: 'Real Obafunso Lounge',
     appLogoImage: require('@src/assets/images/logo/favicon.png').default
   },
   layout: {

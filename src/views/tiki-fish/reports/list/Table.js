@@ -328,7 +328,7 @@ const ReportsTable = () => {
 		})
 		const date = new Date()
 		doc.save(
-			`bnb_kitchen_orders_${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}_${date.getDate()}-${date.getMonth()}-${date.getFullYear()}.pdf`
+			`real_obafunso_lounge_orders_${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}_${date.getDate()}-${date.getMonth()}-${date.getFullYear()}.pdf`
 		)
 	}
 
@@ -371,7 +371,7 @@ const ReportsTable = () => {
 		const doc = new jsPDF()
 		doc.setFontSize(24);
 		doc.setTextColor("blue");
-		doc.text("Bnb Kitchen Sales Platform.", 20, 20);
+		doc.text("Real Obafunso Lounge Sales Platform.", 20, 20);
 		doc.setFontSize(12);
 		doc.text(`Report Summary from ${moment(picker[0]).format('LLL')} to ${moment(picker[1]).format('LLL')}`, 20, 30);
 		doc.autoTable({ html: '#report-table', startY: 40, startX: 80 })

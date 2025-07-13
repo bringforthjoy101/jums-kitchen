@@ -327,7 +327,7 @@ const ReportsTable = () => {
 		})
 		const date = new Date()
 		doc.save(
-			`bnb_kitchen_orders_${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}_${date.getDate()}-${date.getMonth()}-${date.getFullYear()}.pdf`
+			`real_obafunso_lounge_orders_${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}_${date.getDate()}-${date.getMonth()}-${date.getFullYear()}.pdf`
 		)
 	}
 
