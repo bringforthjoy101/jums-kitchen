@@ -314,7 +314,7 @@ const Cart = (props) => {
 									</li>
 									<li className="price-detail">
 										<div className="detail-title detail-total">Total</div>
-										<div className="detail-amt font-weight-bolder">₦{(Number(totalAmount) + (Number(subTotal) * 0.05)).toLocaleString()}</div>
+										<div className="detail-amt font-weight-bolder">₦{(Number(totalAmount) + (Number(subTotal) * 0)).toLocaleString()}</div>
 									</li>
 								</ul>
 								<Button.Ripple
