@@ -116,7 +116,7 @@ const { selectedOrder } = store
 								<p className="invoice-total-amount">₦{selectedOrder?.subTotal.toLocaleString()}</p>
 							</div>
 							<div className="invoice-total-item">
-								<p className="invoice-total-title">Tax (5%):</p>
+								<p className="invoice-total-title">Tax (0%):</p>
 								<p className="invoice-total-amount">₦{(Number(selectedOrder?.tax || 0)).toLocaleString()}</p>
 							</div>
 							<div className="invoice-total-item">

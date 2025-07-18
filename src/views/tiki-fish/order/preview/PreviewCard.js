@@ -184,7 +184,7 @@ const PreviewCard = ({ data }) => {
 								<p className="invoice-total-amount">₦{data.subTotal.toLocaleString()}</p>
 							</div>
 							<div className="invoice-total-item">
-								<p className="invoice-total-title">Tax (5%):</p>
+								<p className="invoice-total-title">Tax (0%):</p>
 								<p className="invoice-total-amount">₦{(Number(data.tax)).toLocaleString()}</p>
 							</div>
 							<div className="invoice-total-item">
